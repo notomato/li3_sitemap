@@ -50,7 +50,7 @@ class Sitemap extends \lithium\core\StaticObject{
 			$conditions = array();
 			$orders = array();
 			$fields = array('name','updated');
-			$limit = 100;
+			$limit = 200;
 			$options = compact('conditions','order','fields', 'limit');
 			
 			$model = $v;
