@@ -8,7 +8,7 @@
 	<?php foreach($collections as $collection): 
 		foreach($collection as $item): ?>
 	<url>
-		<loc>http://www.lithium101.com<?=$this->url(array("{$controller}::view", "id"=>$item->_id),array('absolute'=>true));?></loc>
+		<loc>http://www.lithium101.com<?=$this->url(array("{$controller}::view", "name"=>$item->name, 'owner' => $item->owner->login),array('absolute'=>true));?></loc>
 		<lastmod><?= date('Y-m-d\TH:i:sP', (isset($item->updated) ? $item->updated->sec : $item->created->sec ))?></lastmod>
 	</url>
 	<?php endforeach; endforeach;?>
